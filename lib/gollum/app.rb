@@ -289,6 +289,12 @@ module Precious
       format       = params[:format].intern
       wiki = wiki_new
 
+      if params[:content].length == 0
+        @message = "New pages must contain content"
+        mustache :error
+        return
+      end
+      
       begin
         wiki.write_page(name, format, params[:content], commit_message, path)
 
