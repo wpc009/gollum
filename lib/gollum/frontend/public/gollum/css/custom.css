@@ -1,0 +1,58 @@
+.markdown-body {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.compare .data tr td {
+    font-size: 1.0em;
+}
+
+#head #searchbar #searchbar-fauxtext {
+    height: 2em;
+}
+
+#gollum-editor #gollum-editor-function-bar #gollum-editor-format-selector label {
+	padding: 0 0.5em 0 0;
+}
+
+.toc-title {
+	color: black;
+	font-size: 24px;
+	font-weight: bold;
+	
+}
+
+.toc ul li {
+	line-height: 1.75em;
+	font-size: 14px;
+}
+
+#cust-header-wrapper {
+	background: transparent url('/images/header_bg.png') top center repeat-x;
+	height: 80px;
+}
+
+#cust-header {
+	width: 85%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#cust-header h1 {
+	font-family: sans-serif;
+	padding: 1.1em 0 0 0;
+	height: 80px;
+	color: #eee;
+	font-size: 150%;
+	margin: 10px;
+}
+
+#cust-footer {
+	text-align: center;
+	margin: 10px;
+	font-weight: bold;
+}
+
+#cust-footer img {
+	padding-bottom: 0.3em
+}

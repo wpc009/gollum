@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="{{base_url}}/css/template.css" media="all">
   {{#css}}<link rel="stylesheet" type="text/css" href="{{base_url}}/custom.css" media="all">{{/css}}
 
+  <link rel="stylesheet" type="text/css" href="{{base_url}}/css/custom.css" media="all">
   <!--[if IE 7]>
   <link rel="stylesheet" type="text/css" href="{{base_url}}/css/ie7.css" media="all">
   <![endif]-->
@@ -48,6 +49,11 @@
   <title>{{title}}</title>
 </head>
 <body>
+<div id="cust-header-wrapper"> 
+<div id="cust-header"> 
+    <h1><img src="/images/logo.png" alt="FreeRADIUS" align="absmiddle">&nbsp;&nbsp;Documentation for the world's most popular RADIUS Server.</h1> 
+</div>
+</div>
 
 {{{yield}}}
 
