@@ -15,6 +15,10 @@ module Precious
       def title
         "Home"
       end
+
+      def user_name
+        @user
+      end
     end
   end
 end
