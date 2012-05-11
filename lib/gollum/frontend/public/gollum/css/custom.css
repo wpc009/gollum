@@ -70,14 +70,24 @@ b {
     border-radius: 0px
 }
 
+.markdown-body table {
+    border-collapse: collapse;
+}
+
 .markdown-body table tr th {
     background: #F0F4FF;
     border: 1px solid #BFCFFF;
+    padding: 3px 8px;
 }
 
 .markdown-body table tr td {
     background: #F0F4FF;
     border: 1px solid #BFCFFF;
+    padding: 3px 8px;
+}
+
+.markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body li {
+    margin: 5px 0;
 }
 
 #wiki-toc-main {
