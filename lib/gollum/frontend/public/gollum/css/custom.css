@@ -119,6 +119,10 @@ b {
     border: 1px solid #6078bf;
 }
 
+.compare .data tr td {
+    font-size: 1.0em;
+}
+
 #head #searchbar #searchbar-fauxtext {
     height: 2em;
 }
