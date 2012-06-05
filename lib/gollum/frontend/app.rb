@@ -3,6 +3,7 @@ require 'sinatra'
 require 'gollum'
 require 'mustache/sinatra'
 require 'useragent'
+require 'base64'
 
 require 'gollum/frontend/views/layout'
 require 'gollum/frontend/views/editable'
@@ -60,6 +61,10 @@ module Precious
       enable :logging, :raise_errors, :dump_errors
     end
 
+    before '/*' do
+      @user = http_user
+    end
+    
     get '/' do
       show_page_or_file('Home')
     end
@@ -262,8 +267,14 @@ module Precious
       wiki.update_page(page, name, format, content.to_s, commit_message)
     end
 
+    def http_user
+      if user = request.env["HTTP_AUTHORIZATION"]
+         Base64.decode64(user.split(' ')[1]).split(':')[0]	
+      end 
+    end
+
     def commit_message
-      { :message => params[:message] }
+      { :message => params[:message], :name => @user, :email => @user}
     end
   end
 end
