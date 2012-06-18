@@ -126,12 +126,17 @@ module Precious
 
       format = params[:format].intern
 
-      begin
-        wiki.write_page(name, format, params[:content], commit_message)
-        redirect "/#{CGI.escape(Gollum::Page.cname(name))}"
-      rescue Gollum::DuplicatePageError => e
-        @message = "Duplicate page: #{e.message}"
+      if params[:content].length == 0
+        @message = "New pages must contain content"
         mustache :error
+      else 
+        begin
+          wiki.write_page(name, format, params[:content], commit_message)
+          redirect "/#{CGI.escape(Gollum::Page.cname(name))}"
+        rescue Gollum::DuplicatePageError => e
+          @message = "Duplicate page: #{e.message}"
+          mustache :error
+        end
       end
     end
 
