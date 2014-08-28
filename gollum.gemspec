@@ -507,6 +507,7 @@ Gem::Specification.new do |s|
     lib/gollum/public/gollum/livepreview/licenses/sundown/sundown.txt
     lib/gollum/public/gollum/livepreview/licenses/templarian_windowsicons/license.txt
     lib/gollum/public/gollum/livepreview/readme.md
+    lib/gollum/templates/user.mustache
     lib/gollum/templates/compare.mustache
     lib/gollum/templates/create.mustache
     lib/gollum/templates/edit.mustache
